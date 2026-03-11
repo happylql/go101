@@ -1126,6 +1126,8 @@ The design causes two problems:
    and the `-gcflags=-lang=go1.xy` compiler option is not specified,
    then the behavior of the code in the script file is compiler dependent,
    just as what the above examples show.
+   And again, please note that, because of implementation bugs,
+   certain toolchain versions might ignore `//go:build go1.xy` comment directives.
 -. If, for any reason (for example, to use a feature provided in newer Go versions),
    you upgrade the language version of a Go module that you maintain to 1.22 or higher,
    the behavior of the Go module might change. If the behavior changes

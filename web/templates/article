@@ -188,13 +188,15 @@
 </div>
 
 <div class="alert alert-warning text-center"><small>
-The <a href="/optimizations/101.html">Go Optimizations 101</a>,
-<a href="/details-and-tips/101.html">Go Details &amp; Tips 101</a>
-and <a href="/generics/101.html">Go Generics 101</a> books
-are all updated to Go 1.25.
+The <a href="/optimizations/101.html">Go Optimizations 101</a> and
+<a href="/details-and-tips/101.html">Go Details &amp; Tips 101</a> books
+have been updated to Go 1.25.
+
+{{ if false }}
 The most cost-effective way to get them is through
-<a href="https://leanpub.com/b/go-optimizations-details-generics">this book bundle</a>
+<a href="https://leanpub.com/b/go-optimizations-details-fundamentals">this book bundle</a>
 in the Leanpub book store.
+{{ end }}
 
 {{ if false }}
 <p></p>
@@ -254,6 +256,108 @@ or join <a href="https://join.slack.com/t/go-101/shared_invite/zt-y2pvwg00-Oz7lD
 
 {{ if and $show_index .Index -}}
 
+<p>
+</p>
+
+<div class="alert alert-warning"><small>
+
+
+{{ if $show_bookstore_links -}}
+<div id="ebooks">
+
+	{{- if $is_fundamentals }}
+The digital versions of this book are available at the following places:
+<ul>
+<li>
+	<a href="https://leanpub.com/go101">Leanpub store</a>,
+	<i>$19.99+</i>.
+</li>
+<li>
+	<a href="https://books.apple.com/book/id1459984231">Apple Books store</a>,
+	<i>$19.99</i>.
+</li>
+<li>
+	<a href="https://play.google.com/store/books/details?id=Dc1wEAAAQBAJ">Google Play store</a>,
+	<i>$19.99</i>.
+</li>
+<li>
+	<a href="https://github.com/go101/go101/releases">Free ebooks</a>,
+	including pdf, epub and azw3 formats.
+</li>
+</ul>
+	{{ end -}}
+
+	{{- if $is_optimizations }}
+The digital versions of this book are available at the following places:
+<ul>
+<li>
+	<a href="https://leanpub.com/go-optimizations-101">Leanpub store</a>,
+	<i>$9.99+</i>.
+</li>
+<li>
+	<a href="https://books.apple.com/book/id1609924340">Apple Books store</a>,
+	<i>$9.99</i>.
+</li>
+<li>
+	<a href="https://www.amazon.com/dp/B09NT2HJCM">Amazon Kindle store</a>,
+	<i>$9.99</i>.
+</li>
+<li>
+	<a href="https://play.google.com/store/books/details?id=Ac1wEAAAQBAJ">Google Play store</a>,
+	<i>$9.99</i>.
+</li>
+</ul>
+	{{ end -}}
+
+	{{- if $is_details_and_tips }}
+The digital versions of this book are available at the following places:
+<ul>
+<li>
+	<a href="https://leanpub.com/go-details-and-tips-101">Leanpub store</a>,
+	<i>$8.99+</i>.
+</li>
+<li>
+	<a href="https://www.amazon.com/dp/B09NT56PW8">Amazon Kindle store</a>,
+	<i>$8.99</i>.
+</li>
+<li>
+	<a href="https://books.apple.com/book/id1609931638">Apple Books store</a>,
+	<i>$8.99</i>.
+</li>
+<li>
+	<a href="https://play.google.com/store/books/details?id=A81wEAAAQBAJ">Google Play store</a>,
+	<i>$8.99</i>.
+</li>
+</ul>
+	{{ end -}}
+
+	{{- if $is_generics }}
+The digital versions of this book are available at the following places:
+<ul>
+<li>
+	<a href="https://leanpub.com/go-generics-101">Leanpub store</a>,
+	<i>$7.99+</i>.
+</li>
+<li>
+	<a href="https://www.amazon.com/dp/B09XBQNNF2">Amazon Kindle store</a>,
+	<i>$7.99</i>.
+</li>
+<li>
+	<a href="https://books.apple.com/book/id1618059315">Apple Books store</a>,
+	<i>$7.99</i>.
+</li>
+<li>
+	<a href="https://play.google.com/store/books/details?id=D81wEAAAQBAJ">Google Play store</a>,
+	<i>$7.99</i>.
+</li>
+</ul>
+	{{ end -}}
+
+</div>
+{{ end -}}
+
+</small></div>
+
 <hr>
 
 <div class="text-center"><a href="#i-{{ .Filename }}">(more articles ↡)</a></div>
@@ -277,103 +381,6 @@ description flaws, code bugs and broken links.
 </small></div>
 
 <div class="alert alert-warning"><small>
-
-
-{{ if $show_bookstore_links -}}
-<div id="ebooks">
-
-	{{- if $is_fundamentals }}
-The digital versions of this book are available at the following places:
-<ul>
-<li>
-	<a href="https://leanpub.com/go101">Leanpub store</a>,
-	<i>$19.99+ (You can get this book from <a href="https://leanpub.com/b/go-optimizations-details-generics-fundamentals">this boundle</a> which also contains 3 other books, with the same price)</i>.
-</li>
-<li>
-	<!--a href="https://www.amazon.com/dp/B07Q3HWZ98">Amazon Kindle store</a>,
-	<i>$39.99</i>. -->
-	Amazon Kindle store, <i>(unavailable currently)</i>.
-</li>
-<li>
-	<a href="https://books.apple.com/book/id1459984231">Apple Books store</a>,
-	<i>$19.99</i>.
-</li>
-<li>
-	<a href="https://play.google.com/store/books/details?id=Dc1wEAAAQBAJ">Google Play store</a>,
-	<i>$19.99</i>.
-</li>
-<li>
-	<a href="https://github.com/go101/go101/releases">Free ebooks</a>,
-	including pdf, epub and azw3 formats.
-</li>
-</ul>
-	{{ end -}}
-
-	{{- if $is_optimizations }}
-The digital versions of this book are available at the following places:
-<ul>
-<li>
-	<a href="https://leanpub.com/go-optimizations-101">Leanpub store</a>,
-	<i>$7.99+</i> (Or buy this book from <a href="https://leanpub.com/b/go-optimizations-details-generics">this</a> or <a href="https://leanpub.com/b/go-optimizations-details">this</a> book bundle).
-</li>
-<li>
-	<a href="https://books.apple.com/book/id1609924340">Apple Books store</a>,
-	<i>$7.99</i>.
-</li>
-<li>
-	<a href="https://www.amazon.com/dp/B09NT2HJCM">Amazon Kindle store</a>,
-	<i>$7.99</i>.
-</li>
-</ul>
-	{{ end -}}
-
-	{{- if $is_details_and_tips }}
-The digital versions of this book are available at the following places:
-<ul>
-<li>
-	<a href="https://leanpub.com/go-details-and-tips-101">Leanpub store</a>,
-	<i>$7.99+</i> ($7.99 is the minimum book price at Leanpub. It is more cost-effective to buy this book from <a href="https://leanpub.com/b/go-optimizations-details">this</a> or <a href="https://leanpub.com/b/go-optimizations-details-generics#bundle-page-go-details-and-tips-101">this</a> book bundle).
-</li>
-<li>
-	<a href="https://www.amazon.com/dp/B09NT56PW8">Amazon Kindle store</a>,
-	<i>$4.99</i>.
-</li>
-<li>
-	<a href="https://books.apple.com/book/id1609931638">Apple Books store</a>,
-	<i>$4.99</i>.
-</li>
-<li>
-	<a href="https://play.google.com/store/books/details?id=A81wEAAAQBAJ">Google Play store</a>,
-	<i>$4.99</i>.
-</li>
-</ul>
-	{{ end -}}
-
-	{{- if $is_generics }}
-The digital versions of this book are available at the following places:
-<ul>
-<li>
-	<a href="https://leanpub.com/go-generics-101">Leanpub store</a>,
-	<i>$7.99+</i> ($7.99 is the minimum book price at Leanpub. It is more cost-effective to buy this book from <a href="https://leanpub.com/b/go-optimizations-details">this</a> or <a href="https://leanpub.com/b/go-optimizations-details-generics#bundle-page-go-details-and-tips-101">this</a> book bundle).
-</li>
-<li>
-	<a href="https://www.amazon.com/dp/B09XBQNNF2">Amazon Kindle store</a>,
-	<i>$5.99</i>.
-</li>
-<li>
-	<a href="https://books.apple.com/book/id1618059315">Apple Books store</a>,
-	<i>$5.99</i>.
-</li>
-<li>
-	<a href="https://play.google.com/store/books/details?id=D81wEAAAQBAJ">Google Play store</a>,
-	<i>$5.99</i>.
-</li>
-</ul>
-	{{ end -}}
-
-</div>
-{{ end -}}
-
 
 {{- if false }}
 

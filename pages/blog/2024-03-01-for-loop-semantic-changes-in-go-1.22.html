@@ -1202,7 +1202,7 @@ The design causes two problems:
 <ol class="tmd-list">
 <li class="tmd-list-item">
 <div class="tmd-usual">
-Some people like to use the <code class="tmd-code-span">go run</code> command to run Go code as scripts (a set of Go source files without <code class="tmd-code-span">go.mod</code> files). If a Go script source file doesn't contain a <code class="tmd-code-span">//go:build go1.xy</code> comment directive and the <code class="tmd-code-span">-gcflags=-lang=go1.xy</code> compiler option is not specified, then the behavior of the code in the script file is compiler dependent, just as what the above examples show.
+Some people like to use the <code class="tmd-code-span">go run</code> command to run Go code as scripts (a set of Go source files without <code class="tmd-code-span">go.mod</code> files). If a Go script source file doesn't contain a <code class="tmd-code-span">//go:build go1.xy</code> comment directive and the <code class="tmd-code-span">-gcflags=-lang=go1.xy</code> compiler option is not specified, then the behavior of the code in the script file is compiler dependent, just as what the above examples show. And again, please note that, because of implementation bugs, certain toolchain versions might ignore <code class="tmd-code-span">//go:build go1.xy</code> comment directives.
 </div>
 </li>
 <li class="tmd-list-item">
